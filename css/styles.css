@@ -112,13 +112,25 @@ ul {
   display: flex;
 }
 
+.header-adress .header-adress-icon {
+  fill: #757575;
+  margin-right: 10px;
+}
+
+.header-adress-link:hover .header-adress-icon,
+.header-adress-link:focus .header-adress-icon {
+  fill: var(--accent-color);
+}
+
 .header-adress .item + .item {
   margin-left: 50px;
 }
 
 .header-adress .header-adress-link {
-  color: #757575;
+  display: flex;
+  align-items: center;
 
+  color: #757575;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -197,37 +209,14 @@ ul {
   width: 270px;
 }
 
-.features .item::before {
-  display: block;
-  content: "";
+.features .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f5f4fa;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-diagram::before {
-  background-image: url(../images/diagram.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .features .item + .item {
@@ -266,8 +255,7 @@ ul {
   margin-left: 30px;
 }
 
-.activities .activities-title,
-.team .team-title {
+.section-title {
   margin-bottom: 50px;
 
   color: var(--header-color);
@@ -317,6 +305,93 @@ ul {
 .team .teaam-text {
   font-size: 16px;
   line-height: 1.19;
+}
+
+.team-links-list {
+  display: flex;
+  list-style-type: none;
+  margin-top: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.team-links-list .team-links-item + .team-links-item {
+  margin-left: 10px;
+}
+
+.team-links-list .team-links-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team-links-item .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.team-links-item .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+  background-color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team-links-item .link:hover,
+.team-links-item .link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-links-item .link:hover .icon,
+.team-links-item .link:focus .icon {
+  fill: #ffffff;
+}
+
+.list-standing {
+  display: flex;
+  list-style-type: none;
+}
+
+.list-standing .item {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+}
+
+.list-standing .item + .item {
+  margin-left: 30px;
+}
+
+.list-standing .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+}
+
+.list-standing .icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+
+.list-standing .link:hover,
+.list-standing .link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.list-standing .link:hover .icon,
+.list-standing .link:focus .icon {
+  fill: var(--accent-color);
 }
 
 .footer {
@@ -392,9 +467,16 @@ ul {
   list-style-type: none;
 }
 
+.social-list .icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
 .social-list .link {
-  display: inline-block;
-  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   width: 44px;
   height: 44px;
@@ -404,30 +486,6 @@ ul {
 .social-list .link:hover,
 .social-list .link:focus {
   background-color: var(--accent-color);
-}
-
-.instagram_white {
-  background-image: url(../images/instagram_white.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.twitter_white {
-  background-image: url(../images/twitter_white.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.facebook_white {
-  background-image: url(../images/facebook_white.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.linkedin_white {
-  background-image: url(../images/linkedin_white.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .social-list .item + .item {
